@@ -1,3 +1,10 @@
+PATH
+  remote: admin
+  specs:
+    admin (0.0.1)
+      godmin (~> 1.0.0)
+      rails (~> 4.2.5)
+
 GEM
   remote: https://ruby.taobao.org/
   specs:
@@ -265,6 +272,7 @@ PLATFORMS
 DEPENDENCIES
   access-granted (= 1.0.4)
   acts-as-taggable-on (= 3.5.0)
+  admin!
   apipie-rails (= 0.3.5)
   awesome_print
   byebug

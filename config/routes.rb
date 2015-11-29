@@ -17,5 +17,7 @@ Rails.application.routes.draw do
       end
     end
   end
-
+  
+  mount Admin::Engine, at: "admin"
+  root to: "application#welcome"
 end

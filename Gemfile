@@ -33,6 +33,8 @@ gem 'godmin', '1.0.0'
 gem 'clockwork', '1.2.0'
 gem 'sidekiq', '4.0.1'
 
+gem "admin", path: "admin"
+
 group :development, :test do
   gem 'faker', '>= 1.4.3'
   gem 'rspec-rails', '>= 3.1.0'
