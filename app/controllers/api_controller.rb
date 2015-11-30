@@ -5,10 +5,6 @@ class ApiController < ApplicationController
     render json: { message: 'page not found' }, status: 404
   end
 
-  rescue_from ActionController::RoutingError do
-    render json: { message: 'page not found' }, status: 404
-  end
-
   private
 
   def login_user
