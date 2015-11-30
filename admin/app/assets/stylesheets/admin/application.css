@@ -12,6 +12,7 @@
  *
  *= require godmin
  *= require ./redactor
+ *= require ./trix
  *= require_tree .
  *= require_self
  */

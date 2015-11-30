@@ -8,5 +8,8 @@
     plugins: ['fullscreen'],
     imageUpload: '/api/v1/posts/image_upload'
   } %>
+
+  <input id="x" type="hidden" name="content">
+  <trix-editor input="x"></trix-editor>
   <%= f.submit %>
 <% end %>

@@ -14,4 +14,5 @@
 //= require moment/en-gb
 //= require godmin
 //= require ./redactor
-//= require_tree .
+//= require ./trix
+// require_tree .
