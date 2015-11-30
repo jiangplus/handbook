@@ -10,6 +10,10 @@ class Post < ActiveRecord::Base
   	Post.create(title: 'new post')
   end
 
+  after_save do
+  	# HardWorker.perform_async(title)
+  end
+
   def to_s
     title
   end

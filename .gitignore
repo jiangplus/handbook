@@ -21,3 +21,5 @@ db/data.yml
 
 .DS_Store
 .env
+
+dump.rdb
