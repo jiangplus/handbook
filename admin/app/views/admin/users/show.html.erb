@@ -1,0 +1,47 @@
+<%= render partial: "breadcrumb" %>
+
+<table class="table table-bordere table-striped">
+  <% @resource_service.attrs_for_show.each do |attr| %>
+    <tr>
+      <th><%= @resource_class.human_attribute_name(attr) %></th>
+      <td><%= column_value(@resource, attr) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h4>Posts</h4>
+
+<div id="table" class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <% Admin::PostService.attrs_for_index.each do |attr| %>
+          <th class="column-<%= attr %>">
+            <%= column_header attr %>
+          </th>
+        <% end %>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @resource.posts.each do |resource| %>
+        <tr data-resource-id="<%= resource.id %>" class="<%= "highlight" if flash[:updated_ids] && flash[:updated_ids].include?(resource.id) %>">
+          <% if Admin::PostService.batch_action_map.present? %>
+            <td align="center">
+              <%= check_box_tag "batch_action[items][#{resource.id}]", nil, nil,
+                data: { behavior: "batch-actions-checkbox" } %>
+            </td>
+          <% end %>
+          <% Admin::PostService.attrs_for_index.each do |attr| %>
+            <td>
+              <%= column_value(resource, attr) %>
+            </td>
+          <% end %>
+          <td>
+            <%= render partial: "#{controller_path}/columns/actions", locals: { resource: resource } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

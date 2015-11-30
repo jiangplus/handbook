@@ -1,0 +1,7 @@
+
+<%= form_for @resource do |f| %>
+  <%= f.association :user %>
+  <%= f.input :title %>
+  <%= f.file_field :thumb %>
+  <%= f.submit %>
+<% end %>
