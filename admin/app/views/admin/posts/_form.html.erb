@@ -3,5 +3,10 @@
   <%= f.association :user %>
   <%= f.input :title %>
   <%= f.file_field :thumb %>
+  <%= f.redactor_area :text, {
+    buttons: ['formatting', 'bold', 'italic', 'image'],
+    plugins: ['fullscreen'],
+    imageUpload: '/api/v1/posts/image_upload'
+  } %>
   <%= f.submit %>
 <% end %>

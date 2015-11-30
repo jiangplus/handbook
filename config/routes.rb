@@ -9,7 +9,10 @@ Rails.application.routes.draw do
           post :login
         end
       end
-      resources :products do
+      resources :posts do
+        collection do
+          post :image_upload
+        end
         member do
           post :upload_photo
           post :remove_photo

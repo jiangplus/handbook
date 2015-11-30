@@ -6,6 +6,9 @@
       <% if attr == :thumb %>
         <th><%= @resource_class.human_attribute_name(attr) %></th>
         <td><p><%= image_tag column_value(@resource, attr) %></p></td>
+      <% elsif attr == :text %>
+        <th><%= @resource_class.human_attribute_name(attr) %></th>
+        <td><p><%=raw column_value(@resource, attr) %></p></td>
       <% else %>
         <th><%= @resource_class.human_attribute_name(attr) %></th>
         <td><%= column_value(@resource, attr) %></td>
