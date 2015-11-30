@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   end
   
   mount Admin::Engine, at: "admin"
-  root to: "application#welcome"
+  root to: "api/v1/posts#welcome"
 end

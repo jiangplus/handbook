@@ -4,6 +4,10 @@ class Api::V1::PostsController < ApiController
     render json: { filelink: '/uploads/post/thumb/1/1203251823070dd2468eaff085.jpg' }
   end
 
+  def welcome
+  	render text: 'welcome'
+  end
+
   def index
   	raise ActionController::ActionControllerError.new('User Not Found')
   	render json: { msg: 'ok' }
