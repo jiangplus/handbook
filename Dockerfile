@@ -11,6 +11,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
+
+VOLUME ["/usr/src/app/db/data"]
+
 RUN bundle install
 RUN rake db:migrate
 
