@@ -1,6 +1,7 @@
 source 'https://ruby.taobao.org'
 
 gem 'rails', '4.2.5'
+gem 'sqlite3'
 gem 'pg', '0.18.4'
 gem 'redis', '3.2.2'
 
