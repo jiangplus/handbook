@@ -3,8 +3,13 @@
 <table class="table table-bordere table-striped">
   <% @resource_service.attrs_for_show.each do |attr| %>
     <tr>
-      <th><%= @resource_class.human_attribute_name(attr) %></th>
-      <td><%= column_value(@resource, attr) %></td>
+      <% if attr == :thumb %>
+        <th><%= @resource_class.human_attribute_name(attr) %></th>
+        <td><p><%= image_tag column_value(@resource, attr) %></p></td>
+      <% else %>
+        <th><%= @resource_class.human_attribute_name(attr) %></th>
+        <td><%= column_value(@resource, attr) %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>

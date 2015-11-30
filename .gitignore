@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
+public/uploads/
 db/data.yml
+
 .DS_Store
 .env
