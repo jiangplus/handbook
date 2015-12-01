@@ -5,7 +5,7 @@ class Api::V1::PostsController < ApiController
   end
 
   def welcome
-  	render text: 'welcome one'
+  	render text: 'welcome two'
   end
 
   def index
