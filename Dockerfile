@@ -15,7 +15,6 @@ COPY . /usr/src/app
 VOLUME ["/usr/src/app/db/data"]
 
 RUN bundle install
-RUN rake db:migrate
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
