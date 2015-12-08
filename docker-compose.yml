@@ -1,0 +1,19 @@
+pg:
+  image: daocloud.io/postgres
+  environment:
+   - POSTGRES_PASSWORD=postgres
+hb:
+  build: .
+  ports:
+   - "3000:3000"
+  links:
+   - "pg:db"
+  environment:
+   - QINIU_ACCESS_KEY=EkNoxtMnQVkEvcodq7FD0sdK3Fs1Jt-Ys0KZqsAd
+   - QINIU_SECRET_KEY=2hg1Fa7_Jr8Kt9UEJBNmertZFPIkVLhLWV-CrCdS
+   - QINIU_BUCKET=fashion
+   - QINIU_BUCKET_DOMAIN=7xljvs.com2.z0.glb.qiniucdn.com
+   - DB=handbook
+   - DB_TEST=handbooktest
+   - DB_ENV_POSTGRES_USER=postgres
+   - DB_ENV_POSTGRES_PASSWORD=postgres
