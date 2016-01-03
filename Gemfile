@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 gem 'rails', '4.2.5'
 gem 'sqlite3'
@@ -33,6 +33,7 @@ gem 'godmin', '1.0.0'
 
 gem 'clockwork', '1.2.0'
 gem 'sidekiq', '4.0.1'
+gem 'graphql'
 
 gem "admin", path: "admin"
 
